@@ -6,13 +6,13 @@ RED='\033[0;31m'
 BWhite='\033[1;37m' 
 NC='\033[0m'
 if ! ls -l $HOME | grep "francinette-image" &> /dev/null; then
-	git clone https://github.com/WaRtr0/francinette-image.git $HOME/francinette-image
+	git clone https://github.com/kugorang/francinette-image.git $HOME/francinette-image
 fi
 
 chmod +x $HOME/francinette-image/run.sh
 
 if ! ls -l $HOME/francinette-image | grep "francinette.tar" &> /dev/null; then
-	if hostname | grep "42lyon.fr" &> /dev/null; then
+	if hostname | grep "42gyeongsan.kr" &> /dev/null; then
  		if ls -l /sgoinfre/goinfre/Perso/mmorot/share | grep "francinette.tar" &> /dev/null; then
    			echo -e "${BLUE}[Francinette] ${WHITE}Copy of francinette.tar (${BWhite}/sgoinfre/goinfre/Perso/mmorot/share${WHITE})"
       			cp /sgoinfre/goinfre/Perso/mmorot/share/francinette.tar $HOME/francinette-image/
